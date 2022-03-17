@@ -1,18 +1,21 @@
-import allBabyNames from "../babynames.json"
-const babyNames = [...allBabyNames]
-
+//import allBabyNames from "../babynames.json"
+import arrOfNames from "./reorderNames"
 
 export default function Main():JSX.Element{
-
-    function arrOfnames(){
-        const allNames = babyNames.map((eachName) => <button key={eachName.id}>{eachName.name}</button>)
-        return allNames
-    }
+ 
 
 
     return(
         <>
-        {arrOfnames()}
+        <header>
+            <h1>Baby Names</h1>
+        </header>
+        <main>
+            <input placeholder="search name ..."/>
+        <hr/>
+            {arrOfNames()} 
+        </main>
+
         </>
 
     )
