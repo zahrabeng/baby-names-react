@@ -1,11 +1,40 @@
 h1{
-    color: black;
+    color: #154c79;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+}
+
+.babyNames{
+ border: #873e23;
+ border-width: 10px;
+ border-style: double;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 20px;
+ margin-top: 15px;
+}
+
+input{
+    margin: 0 auto;
+    display: block;
 }
 
 .f{
-    color:purple;
+    color:#eeeee4;
+    background-color: #76b5c5;
 }
 
 .m{
-    color: blue;
+    color: #063970;
+    background-color: #eeeee4;
+
+}
+button{
+    margin: 5px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+body{
+    background-color: #eab676;
 }
