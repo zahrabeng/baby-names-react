@@ -8,9 +8,10 @@ interface babyNameInfo {
     sex: string;
 }
 
-export default function arrOfnames(){
+export default function arrOfnames():JSX.Element[]{
     const sortedNames = babyNames.sort(sorting)
     const allNames = sortedNames.map((eachName)=> <button key={eachName.id}>{eachName.name}</button>)
+    console.log(allNames)
     return allNames
 }
 
@@ -23,8 +24,4 @@ function sorting (a:babyNameInfo, b:babyNameInfo){
     }return 0;
 }
 
-// function sortedNames(){
-//     const sortedNames = babyNames.sort(sorting)
-//     return sortedNames
-// }
 
