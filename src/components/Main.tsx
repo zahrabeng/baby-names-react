@@ -28,6 +28,12 @@ export default function Main():JSX.Element{
         setSearchText(e.target.value.toLowerCase())
     }
 
+    function handleZero(){
+        if (filteredBabyNames.length === 0){
+            return <p className="zero">Sorry! No names matching this search :(</p>
+        }
+    }
+
 
     return(
         <>
@@ -42,6 +48,7 @@ export default function Main():JSX.Element{
             />  
         <div className="babyNames">
             {arrOfNames()}
+            {handleZero()}
         </div>
         </main>
 
