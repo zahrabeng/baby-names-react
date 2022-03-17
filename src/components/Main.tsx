@@ -40,8 +40,9 @@ export default function Main():JSX.Element{
             value={searchText}
             onChange={handleSearchText}
             />  
-        <hr/>
+        <div className="babyNames">
             {arrOfNames()}
+        </div>
         </main>
 
         </>
