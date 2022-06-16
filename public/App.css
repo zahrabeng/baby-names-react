@@ -1,8 +1,12 @@
 h1{
-    color: #154c79;
+    color: #023d6d;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
+    text-decoration: underline;
+    border: 2px solid cadetblue;
+    width: fit-content;
+    margin: 30px auto;
 }
 
 .babyNames{
@@ -40,7 +44,8 @@ button{
 }
 
 body{
-    background-color: #eab676;
+    background-color: #fccc92;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
 .zero{
@@ -54,3 +59,4 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
 }
+

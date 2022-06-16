@@ -58,7 +58,7 @@ export default function Main():JSX.Element{
     return(
         <>
         <header>
-            <h1>Baby Names</h1>
+            <h1>Baby Names App</h1>
         </header>
         <main>
             <input 
