@@ -17,14 +17,32 @@ export default function Main(): JSX.Element {
     oneBabyName.name.toLowerCase().includes(searchText)
   );
 
+  function handleFavouritesClick(eachName:babyNameInfo){
+    if (isInList(eachName)) {
+      console.log('name already in list')
+    } else {
+      setFavourites([...favourites, eachName]) 
+    }
+  }
+
+  function handleRemoveFavourite(eachName:babyNameInfo){
+    const newList: babyNameInfo[] = favourites.filter((babyname) => babyname !== eachName)
+    setFavourites(newList)
+  }
+
+
+  
+  function isInList(name:babyNameInfo){
+    return favourites.find((el) => el.id === name.id) !== undefined;
+  }
   //mapping list of each name in JSON database
   function arrOfNames(): JSX.Element[] {
     const allNames = filteredBabyNames.map((eachName) => (
       <button
         key={eachName.id}
-        className={eachName.sex}
+        className={`${eachName.sex} eachname` }
         value={eachName.name}
-        onClick={() => setFavourites([...favourites, eachName])}
+        onClick={() => handleFavouritesClick(eachName)}
       >
         {eachName.name}
       </button>
@@ -32,24 +50,15 @@ export default function Main(): JSX.Element {
     return allNames;
   }
 
-  function handleSearchText(e: any) {
-    setSearchText(e.target.value.toLowerCase());
-  }
+
 
   const favouritesArray = favourites.map((faveName: babyNameInfo) => (
-    <button key={faveName.id} className={faveName.sex}>
+    <button key={faveName.id} className={faveName.sex} onClick={()=> handleRemoveFavourite(faveName)}>
       {faveName.name}
     </button>
   ));
 
-  // function isInList(){
-  //     for (const name of favourites){
-  //         if (filteredBabyNames.includes(name)){
-  //             const index = filteredBabyNames.indexOf(name)
-  //             filteredBabyNames.splice(index,1)
-  //         }
-  //     }return filteredBabyNames
-  // }
+
 
   //prints message when there are no names matching the search
   function handleZero() {
@@ -67,7 +76,7 @@ export default function Main(): JSX.Element {
         <input
           placeholder="search name ..."
           value={searchText}
-          onChange={handleSearchText}
+          onChange={(e) => setSearchText(e.target.value.toLowerCase())}
         />
         <div>
           <p className="names-length">

@@ -4,21 +4,20 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     text-decoration: underline;
-    border: 2px solid cadetblue;
     width: fit-content;
     margin: 30px auto;
 }
 
 .babyNames{
  border: #873e23;
- border-width: 10px;
- border-style: double;
+ border-width: 2px;
+ border-style: solid;
  border-radius: 20px;
  font-family: 'Courier New', Courier, monospace;
  font-size: 20px;
  margin-top: 15px;
- padding: 10px;
- 
+ padding: 20px;
+ text-align: center;
 }
 
 input{
@@ -45,7 +44,6 @@ button{
 
 body{
     background-color: #fccc92;
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
 .zero{
@@ -60,3 +58,19 @@ body{
     font-size: 25px;
 }
 
+.names-length{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+.eachname{
+    padding: 1%;
+    margin: 1%;
+}
+
+.eachname:hover{
+    font-size: 23px;
+    font-weight: 600;
+}
