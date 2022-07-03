@@ -17,22 +17,22 @@ export default function Main(): JSX.Element {
     oneBabyName.name.toLowerCase().includes(searchText)
   );
 
-  function handleFavouritesClick(eachName:babyNameInfo){
+  function handleFavouritesClick(eachName: babyNameInfo) {
     if (isInList(eachName)) {
-      console.log('name already in list')
+      console.log("name already in list");
     } else {
-      setFavourites([...favourites, eachName]) 
+      setFavourites([...favourites, eachName]);
     }
   }
 
-  function handleRemoveFavourite(eachName:babyNameInfo){
-    const newList: babyNameInfo[] = favourites.filter((babyname) => babyname !== eachName)
-    setFavourites(newList)
+  function handleRemoveFavourite(eachName: babyNameInfo) {
+    const newList: babyNameInfo[] = favourites.filter(
+      (babyname) => babyname !== eachName
+    );
+    setFavourites(newList);
   }
 
-
-  
-  function isInList(name:babyNameInfo){
+  function isInList(name: babyNameInfo) {
     return favourites.find((el) => el.id === name.id) !== undefined;
   }
   //mapping list of each name in JSON database
@@ -40,7 +40,7 @@ export default function Main(): JSX.Element {
     const allNames = filteredBabyNames.map((eachName) => (
       <button
         key={eachName.id}
-        className={`${eachName.sex} eachname` }
+        className={`${eachName.sex} eachname`}
         value={eachName.name}
         onClick={() => handleFavouritesClick(eachName)}
       >
@@ -50,15 +50,15 @@ export default function Main(): JSX.Element {
     return allNames;
   }
 
-
-
   const favouritesArray = favourites.map((faveName: babyNameInfo) => (
-    <button key={faveName.id} className={faveName.sex} onClick={()=> handleRemoveFavourite(faveName)}>
+    <button
+      key={faveName.id}
+      className={faveName.sex}
+      onClick={() => handleRemoveFavourite(faveName)}
+    >
       {faveName.name}
     </button>
   ));
-
-
 
   //prints message when there are no names matching the search
   function handleZero() {
