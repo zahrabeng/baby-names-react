@@ -1,0 +1,76 @@
+h1{
+    color: #023d6d;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    text-decoration: underline;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.babyNames{
+ border: #873e23;
+ border-width: 2px;
+ border-style: solid;
+ border-radius: 20px;
+ font-family: 'Courier New', Courier, monospace;
+ font-size: 20px;
+ margin-top: 15px;
+ padding: 20px;
+ text-align: center;
+}
+
+input{
+    margin: 0 auto;
+    display: block;
+}
+
+.f{
+    color:#eeeee4;
+    background-color: #76b5c5;
+}
+
+.m{
+    color: #063970;
+    background-color: #eeeee4;
+
+}
+button{
+    margin: 5px;
+    padding: 3px;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+body{
+    background-color: #fccc92;
+}
+
+.zero{
+    color: #063970;
+    text-align: center;
+}
+
+.favourites{
+    color: #063970;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+.names-length{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+.eachname{
+    padding: 1%;
+    margin: 1%;
+}
+
+.eachname:hover{
+    font-size: 23px;
+    font-weight: 600;
+}
